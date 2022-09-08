@@ -1,6 +1,6 @@
 @import 'variables'
-// Mixins
 
+// Mixins
 @mixin reset
     *
         margin: 0
@@ -22,6 +22,18 @@
     &:hover
         color: $primary-color
 
+@mixin card-mobile
+    width: 100%
+    height: 200px
+    margin: 0
+    margin-bottom: 2rem
+
+// Mobile
+@mixin  mobile
+    @media ( max-width: 425px)
+        @content
+    
+
 // Placeholder Selectors
 %title-text-shadow
     text-shadow: 3px 2px $black
@@ -39,10 +51,12 @@
     .job-card-title, .job-card-cover, .job-card-description
         opacity: 0
 
-    &:hover
-        .job-card-title, .job-card-cover, .job-card-description
+        @include mobile
             opacity: 1
 
+    &:hover
+        .job-card-title, .job-card-cover, .job-card-description
+            opacity: 1        
 
 // Btns
 .btn
