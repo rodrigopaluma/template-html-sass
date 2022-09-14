@@ -1,0 +1,28 @@
+@use '../1-base/base-mixins'
+
+#main-container
+    display: flex
+    flex-direction: row
+    margin-top: 30px
+
+#main-container, #form-box
+    @include base-mixins.mobile
+        margin-top: 0px
+
+#banner-container, #form-container
+    flex: 1 1 0
+    width: 50%
+
+#banner-container
+    text-align: right
+
+    @include base-mixins.mobile
+        display: none
+
+    img
+        margin-right: -15px
+
+#form-container
+    text-align: center
+    
+        

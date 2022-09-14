@@ -1,0 +1,30 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+#register-container
+    margin-top: 10px
+    padding: 25px
+    p
+        font-size: 14px
+        color: variables.$black
+    a
+        color: variables.$blue-link-hover
+        font-weight: bold
+        text-decoration: none
+
+#get-app-container
+    text-align: center
+    width: 350px
+    p
+        margin: 20px 0
+        font-size: 13px
+    a
+        text-decoration: none
+    img
+        width: 136px
+        height: 40px
+
+#register-container, #get-app-container
+    @include base-mixins.mobile
+        width: 100%
+        border: none

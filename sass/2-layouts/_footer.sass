@@ -1,0 +1,31 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+footer
+    text-align: left
+    width: 1000px
+    margin: 50px auto
+    #footer-links
+        list-style: none
+        li
+            display: inline-block
+            text-transform: uppercase
+            margin-right: 10px
+
+            @include base-mixins.mobile
+                margin-bottom: 10px
+        a
+            text-decoration: none
+            color: variables.$link-footer
+            font-size: 12px
+            font-weight: bold
+    
+    @include base-mixins.mobile
+        width: 90%
+        text-align: center
+
+#copyright
+    font-size: 12px
+    text-transform: uppercase    
+    color: variables.$gray-3
+    margin-top: 10px
