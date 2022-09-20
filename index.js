@@ -12,104 +12,25 @@ app.set('view engine', 'handlebars'); // Configurando o motor de templates
 
 app.use(express.static('./public')); // Configurando a pasta public
 
-
-// Dashboard
-app.get('/dashboard', (req, res)=>{
-    const items = [ "Item 1", "Item 2", "Item 3" ];
-    res.render('dashboard', {items});
+// Contato
+app.get('/contato', (req, res)=>{
+  res.render('contato');
 })
 
-// Post
-app.get('/post', (req, res)=>{
-    const post = {
-        title: 'Título do post',
-        category: 'Categoria do post',
-        body: 'Corpo do post',
-        comments: [
-            {
-                name: 'Nome do comentário',
-                comment: 'Comentário do comentário'
-            },
-            {
-                name: 'Nome do comentário',
-                comment: 'Comentário do comentário'
-            }
-        ]
-    }
-    res.render('blogpost', {post});
+// Trabalho Social
+app.get('/trabalho-social', (req, res)=>{
+  res.render('trabalho');
 })
 
-// Blog
-app.get('/blog', (req, res)=>{
-    const posts = [
-      {
-        title: "Título do post",
-        category: "Categoria do post",
-        body: "Corpo do post",
-        comments: [
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-        ],
-      },
-      {
-        title: "Título do post 2",
-        category: "Categoria do post 2",
-        body: "Corpo do post 2",
-        comments: [
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          }
-        ],
-      },
-      {
-        title: "Título do post 3",
-        category: "Categoria do post 3 ",
-        body: "Corpo do post 3",
-        comments: [
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-        ],
-      },
-      {
-        title: "Título do post 4",
-        category: "Categoria do post 4",
-        body: "Corpo do post 4",
-        comments: [
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-          {
-            name: "Nome do comentário",
-            comment: "Comentário do comentário",
-          },
-        ],
-      },
-    ];
-
-    res.render('blog', {posts});
+// Equitação
+app.get('/equitacao', (req, res)=>{
+  res.render('equitacao');
 })
+
+// Equoterapia
+app.get('/equoterapia', (req, res)=>{
+    res.render('equoterapia');
+});
 
 // Home
 app.get('/', (req, res)=>{
