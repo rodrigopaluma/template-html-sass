@@ -12,6 +12,7 @@ app.set('view engine', 'handlebars'); // Configurando o motor de templates
 
 app.use(express.static('./public')); // Configurando a pasta public
 
+
 // Dashboard
 app.get('/dashboard', (req, res)=>{
     const items = [ "Item 1", "Item 2", "Item 3" ];
@@ -112,16 +113,7 @@ app.get('/blog', (req, res)=>{
 
 // Home
 app.get('/', (req, res)=>{
-    const user = {
-        name: 'Rodrigo',
-        surname: 'Paluma',
-        age: '43 anos',
-    }
-    const palavra = 'Teste de Palavra armazenada em variável';
-    const auth = false;
-    const approved = false;
-
-    res.render('home', {user: user, palavra, auth, approved});
+    res.render('home');
 });
 
 app.listen(3000, ()=>{
