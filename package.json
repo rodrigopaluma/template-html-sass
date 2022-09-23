@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/* --exit",
-    "sass": "sass --watch ./sass/styles.sass:./public/css/styles.css",
     "start": "node index.js",
+    "sass": "sass --watch ./sass/styles.sass:./public/css/styles.css",
     "dev": "nodemon index.js"
   },
   "repository": {
