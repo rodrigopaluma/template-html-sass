@@ -76,6 +76,12 @@ li {
   background-color: #F5821F;
   position: fixed;
   width: 100%;
+  z-index: 10;
+}
+@media (max-width: 425px) {
+  #main-banner .header-top {
+    display: none;
+  }
 }
 #main-banner .header-top ul {
   justify-content: center;
@@ -103,6 +109,11 @@ li {
   padding: 1.5rem 2rem;
   background-color: #231f20;
   z-index: 10;
+}
+@media (max-width: 425px) {
+  #main-banner .nav-container {
+    top: 0;
+  }
 }
 #main-banner .nav-container img {
   max-width: 100px;
@@ -167,9 +178,19 @@ li {
 #main-banner .title-container h2 {
   font-size: 3rem;
 }
+@media (max-width: 425px) {
+  #main-banner .title-container h2 {
+    font-size: 2rem;
+  }
+}
 #main-banner .title-container h1 {
   font-size: 4rem;
   margin-top: 1rem;
+}
+@media (max-width: 425px) {
+  #main-banner .title-container h1 {
+    font-size: 3rem;
+  }
 }
 
 .services-container {
@@ -181,6 +202,9 @@ li {
   .services-container {
     padding: 2rem 0;
   }
+}
+.services-container p {
+  margin-top: 1rem;
 }
 .services-container .services-card-container {
   display: flex;
@@ -241,15 +265,19 @@ li {
 .jobs-container .jobs-list .first-job {
   width: 30%;
   height: 415px;
-  background-image: url("../img/job1.jpg");
+  background-image: url("../img/pimenta.jpg");
   position: relative;
   cursor: pointer;
   transition: 0.5s;
-  margin: 0 2%;
-  width: 100%;
-  height: 200px;
-  margin: 0;
-  margin-bottom: 2rem;
+  margin: 0 10%;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .first-job {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
 }
 .jobs-container .jobs-list .other-jobs-container {
   display: flex;
@@ -275,16 +303,16 @@ li {
   margin-bottom: 2rem;
 }
 .jobs-container .jobs-list .other-jobs-container #job2 {
-  background-image: url("../img/job2.jpg");
+  background-image: url("../img/dogum.jpg");
 }
 .jobs-container .jobs-list .other-jobs-container #job3 {
-  background-image: url("../img/job3.jpg");
+  background-image: url("../img/murano.jpg");
 }
 .jobs-container .jobs-list .other-jobs-container #job4 {
-  background-image: url("../img/job4.jpg");
+  background-image: url("../img/louro.jpg");
 }
 .jobs-container .jobs-list .other-jobs-container #job5 {
-  background-image: url("../img/job5.jpg");
+  background-image: url("../img/charlote.jpg");
 }
 .jobs-container .jobs-list .job-card-cover {
   position: absolute;
@@ -311,7 +339,7 @@ li {
 }
 
 footer {
-  background-color: #1d1d1d;
+  background-color: #231f20;
   color: #8b8e94;
   padding: 5rem 2rem;
 }
@@ -388,6 +416,13 @@ footer .footer-copy-right-container {
 }
 footer .footer-copy-right-container p {
   margin-bottom: 1rem;
+}
+footer .footer-copy-right-container p a {
+  color: #fff;
+  transition: 0.3s;
+}
+footer .footer-copy-right-container p a:hover {
+  color: #F5821F;
 }
 
 /*# sourceMappingURL=styles.css.map */

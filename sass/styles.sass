@@ -15,6 +15,10 @@
         background-color: $primary-color
         position: fixed
         width: 100%
+        z-index: 10
+
+        @include mobile
+            display: none
 
         ul
             justify-content: center
@@ -39,6 +43,8 @@
         background-color: $black
         z-index: 10
 
+        @include mobile
+            top: 0
         img
             max-width: 100px
         
@@ -91,10 +97,16 @@
             font-size: 3rem
             @extend  %title-text-shadow
 
+            @include mobile
+                font-size: 2rem
+
         h1
             font-size: 4rem
             margin-top: 1rem
             @extend  %title-text-shadow
+
+            @include mobile
+                font-size: 3rem
 
 // Serviços
 .services-container
@@ -107,6 +119,9 @@
 
     h2
         @extend %section-title
+
+    p
+        margin-top: 1rem
 
     .services-card-container
         display: flex
@@ -165,16 +180,16 @@
         .first-job
             width: 30%
             height: 415px
-            background-image: url('../img/job1.jpg')
+            background-image: url('../img/pimenta.jpg')
             position: relative
             cursor: pointer
             transition: .5s
-            margin: 0 2%
+            margin: 0 10%
             @extend %center-bg
             @extend %card-hover
 
             @include mobile
-            @include card-mobile
+                @include card-mobile
 
         .other-jobs-container
             display: flex
@@ -199,16 +214,16 @@
                 @include card-mobile
 
             #job2
-                background-image: url('../img/job2.jpg')
+                background-image: url('../img/dogum.jpg')
             
             #job3
-                background-image: url('../img/job3.jpg')
+                background-image: url('../img/murano.jpg')
             
             #job4
-                background-image: url('../img/job4.jpg')
+                background-image: url('../img/louro.jpg')
             
             #job5
-                background-image: url('../img/job5.jpg')
+                background-image: url('../img/charlote.jpg')
 
         .job-card-cover
             position: absolute
@@ -304,3 +319,7 @@ footer
 
         p
             margin-bottom: 1rem
+
+            a
+                color: $light-color
+                @include main-hover
