@@ -1,4 +1,5 @@
 const express = require('express'); // Importando o módulo express
+const port = process.env.PORT || 8000; // Porta Heroku
 const exphbs = require('express-handlebars'); // Importando o módulo express-handlebars
 
 const app = express(); // Criando a aplicação
@@ -37,8 +38,6 @@ app.get('/', (req, res)=>{
     res.render('home');
 });
 
-var porta = process.env.PORT || 8080;
-
-app.listen(porta, ()=>{
-    console.log('Servidor rodando na porta 3000');
+app.listen(port, ()=>{
+    console.log('Servidor rodando na porta 8000');
 })
