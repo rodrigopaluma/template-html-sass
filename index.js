@@ -37,6 +37,8 @@ app.get('/', (req, res)=>{
     res.render('home');
 });
 
-app.listen(3000, ()=>{
+var porta = process.env.PORT || 8080;
+
+app.listen(porta, ()=>{
     console.log('Servidor rodando na porta 3000');
 })
