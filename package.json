@@ -4,8 +4,8 @@
   "description": "Site da Companhia do Cavalo, Haras de Equoterapia e Equitação no município de Araruama.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/* --exit",
     "start": "node index.js",
+    "test": "mocha ./test/* --exit",
     "sass": "sass --watch ./sass/styles.sass:./public/css/styles.css",
     "dev": "nodemon index.js"
   },
